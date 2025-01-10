@@ -20,8 +20,10 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
+@import "~/.config/rofi/shared/fonts.rasi"
+// @import "~/.config/rofi/shared/colors.rasi"
 * {
-    font:                        "Ubuntu Nerd Font 14";
+    // font:                        "Ubuntu Nerd Font 14";
     background:                  #201A41;
     background-alt:              #392684;
     foreground:                  #FFFFFF;
