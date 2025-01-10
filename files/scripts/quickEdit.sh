@@ -3,8 +3,8 @@ tty=kitty
 edit=${EDITOR:-nvim}
 configs="$HOME/.config"
 
-dir="$HOME/.config/rofi/quickedit/type-2"
-theme='style-5'
+dir="$HOME/.config/rofi/quickedit/type-7"
+theme='style-2'
 
 ## Run
 menu_edit=()
