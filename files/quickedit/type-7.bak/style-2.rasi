@@ -9,26 +9,28 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "window";
+	modi:                       "drun,run,filebrowser,window";
     show-icons:                 true;
-    // display-drun:               "Apps";
-    // display-run:                "Run";
-    // display-filebrowser:        "Files";
+    display-drun:               "Apps";
+    display-run:                "Run";
+    display-filebrowser:        "Files";
     display-window:             "Windows";
 	drun-display-format:        "{name}";
-	window-format:              "{c} 󰁕 {t}";
+	window-format:              "{w} · {c} · {t}";
 }
-@import "../../shared/fonts.rasi"
+
 /*****----- Global Properties -----*****/
-* {
-    // font:                        "JetBrains Mono Nerd Font 10";
-    background:                  #180F39;
-    background-alt:              #32197D;
-    foreground:                  #FFFFFF;
-    selected:                    #FF00F1;
-    active:                      #9878FF;
-    urgent:                      #7D0075;
-}
+@import "shared/colors.rasi"
+@import "shared/fonts.rasi"
+// * {
+//     font:                        "JetBrains Mono Nerd Font 10";
+//     background:                  #180F39;
+//     background-alt:              #32197D;
+//     foreground:                  #FFFFFF;
+//     selected:                    #FF00F1;
+//     active:                      #9878FF;
+//     urgent:                      #7D0075;
+// }
 
 /*****----- Main Window -----*****/
 window {
@@ -69,7 +71,7 @@ listbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     30px 60px;
+    padding:                     80px 60px;
     background-color:            transparent;
     background-image:            url("~/.config/rofi/images/b.png", width);
     text-color:                  @foreground;
@@ -88,8 +90,8 @@ textbox-prompt-colon {
 entry {
     enabled:                     true;
     expand:                      false;
-    width:                       350px;
-    padding:                     15px 30px;
+    width:                       300px;
+    padding:                     12px 16px;
     border-radius:               100%;
     background-color:            @background-alt;
     text-color:                  inherit;
@@ -105,14 +107,14 @@ dummy {
 /*****----- Mode Switcher -----*****/
 mode-switcher{
     enabled:                     true;
-    spacing:                     20px;
+    spacing:                     10px;
     background-color:            transparent;
     text-color:                  @foreground;
 }
 button {
-    width:                       150px;
+    width:                       80px;
     padding:                     12px;
-    border-radius:               20%;
+    border-radius:               100%;
     background-color:            @background-alt;
     text-color:                  inherit;
     cursor:                      pointer;
@@ -145,7 +147,7 @@ listview {
 element {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     10px;
+    padding:                     4px;
     border-radius:               100%;
     background-color:            transparent;
     text-color:                  @foreground;
